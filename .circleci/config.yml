@@ -7,7 +7,7 @@ jobs:
       - run: echo "A first hello"
       - run: mkdir -p my_workspace && touch output.txt
       - run: echo "Trying out workspaces" > my_workspace/out
-      - run: docker build -t abhinav-flask:ci .
+      - run: docker build -t abhinav-alpine:ci .
       - run: docker save -o my_workspace/abhinav-alpine.tar abhinav-alpine:ci
       - persist_to_workspace:
             root: my_workspace
@@ -27,7 +27,7 @@ jobs:
     
 workflows:
   version: 2
-  docker_anchore:
+  docker_clair:
     jobs:
       - buildone
       - buildtwo:
