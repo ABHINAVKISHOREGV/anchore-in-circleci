@@ -13,3 +13,4 @@ jobs:
             root: my_workspace
             paths:
                - out
+               - abhinav-alpine.tar
