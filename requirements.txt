@@ -1,2 +1,2 @@
 Flask==0.1.2
-Django==0.9.3
+Django==1.11.29
